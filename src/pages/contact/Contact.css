@@ -1,0 +1,41 @@
+.contact {
+  /* background-color: aliceblue; */
+  padding: 90px 0;
+}
+.contact-container {
+  display: flex;
+  width: 100%;
+  gap: 50px;
+}
+.iframe {
+  width: 40%;
+  min-height: 350px;
+}
+.address {
+  width: 40%;
+}
+.fallow {
+  width: 20%;
+}
+.address-title {
+  font-size: large;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.address-content {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  /* color: rgb(107, 107, 107); */
+}
+p {
+  margin: 0;
+}
+.address-content .icons {
+  font-size: 24px !important;
+}
+.address-content p {
+  line-height: 24px;
+  font-size: 16px;
+}

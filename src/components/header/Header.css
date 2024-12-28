@@ -1,0 +1,62 @@
+.header {
+  width: 100%;
+  background: url(..//ai_touch.webp);
+  /* background: url(..//class.webp); */
+  /* background: url(../ai.webp); */
+
+  /* background-color: aliceblue; */
+  color: rgb(255, 255, 255);
+  background-size: cover;
+  background-position: center bottom;
+}
+.header-container {
+  /* width: 70%;
+  margin: 0 auto; */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+  padding: 150px 0;
+  gap: 30px;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+h1 {
+  font-size: 60px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.header-container p {
+  font-weight: 200;
+}
+.infinite {
+  color: rgb(88, 188, 255);
+  /* color: red; */
+  font-size: 60px !important;
+  margin-bottom: -13px;
+}
+.hr {
+  border: 1px solid rgb(88, 188, 255);
+}
+.first-text {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.last-text {
+  font-size: 16px;
+  line-height: 26px;
+}
+.btn {
+  border-radius: 20px;
+  background-color: rgb(51, 151, 238);
+  color: white;
+  padding: 10px 20px;
+  /* border: 1px solid grey; */
+}
