@@ -1,7 +1,7 @@
 import {useNavigate} from "react-router-dom";
 import {useRef} from "react";
 import "./Navbar.css";
-import PageContainer from "../container/PageContainer";
+import MenuIcon from "@mui/icons-material/Menu";
 
 function Navbar() {
   const nav = useRef();
@@ -9,18 +9,20 @@ function Navbar() {
   const navigate = useNavigate();
   const mobileOpenMenu = useRef();
   const mobileCloseMenu = useRef();
-  const mobileNavbarRight = useRef();
+  const mobileNavbar = useRef();
   const navbar = useRef();
+  const body = document.querySelector("body");
+
   const mobileOpenMenuF = () => {
     mobileOpenMenu.current.style.display = "none";
     mobileCloseMenu.current.style.display = "block";
 
     if (mobileCloseMenu.current.style.display == "block") {
-      mobileNavbarRight.current.style.display = "block";
-      navbar.current.style.display = "none";
+      mobileNavbar.current.style.display = "flex";
+      body.style.overflow = "hidden";
     } else {
-      mobileNavbarRight.current.style.display = "none";
-      navbar.current.style.display = "flex";
+      mobileNavbar.current.style.display = "none";
+      body.style.overflow = "scroll";
     }
   };
   const mobileCloseMenuF = () => {
@@ -28,17 +30,26 @@ function Navbar() {
     mobileCloseMenu.current.style.display = "none";
 
     if (mobileCloseMenu.current.style.display == "block") {
-      mobileNavbarRight.current.style.display = "block";
+      mobileNavbar.current.style.display = "flex";
+      body.style.overflow = "hidden";
     } else {
-      mobileNavbarRight.current.style.display = "none";
-      navbar.current.style.display = "flex";
+      mobileNavbar.current.style.display = "none";
+      body.style.overflow = "scroll";
     }
+  };
+  const mobileNavbarTransparentAndUlClicked = () => {
+    mobileNavbar.current.style.display = "none";
+    mobileOpenMenu.current.style.display = "flex";
+    body.style.overflow = "scroll";
   };
 
   return (
     <>
-      <div ref={nav} className="navbar">
-        <PageContainer>
+      <div
+        ref={nav}
+        className="navbar mx-auto px-6 sm:px-8 lg:px-16 xl:px-40 py-6"
+      >
+        <div className="max-w-8xl">
           <div className="navbar-container" ref={navbar}>
             <div className="navbar-left">
               <img
@@ -48,7 +59,7 @@ function Navbar() {
                 onClick={() => navigate("/")}
               />
             </div>
-            <div className="navbar-right">
+            <div className="navbar-right hidden md:block">
               <ul>
                 <li onClick={() => navigate("/")}> Home</li>
                 <li onClick={() => navigate("/about/")}> About</li>
@@ -57,31 +68,61 @@ function Navbar() {
               </ul>
             </div>
             <div
-              className="mobile-open-menu"
+              className="mobile-open-menu md:hidden"
               ref={mobileOpenMenu}
               onClick={mobileOpenMenuF}
             >
-              E
+              <MenuIcon />
             </div>
           </div>
-          <div className="mobile-navbar" ref={mobileNavbarRight}>
+          <div
+            className="mobile-navbar text-start"
+            id="mobile-navbar"
+            // onClick={mobileNavbarClicked}
+            ref={mobileNavbar}
+          >
             <div
-              className="mobile-close-menu"
-              ref={mobileCloseMenu}
-              onClick={mobileCloseMenuF}
-            >
-              X
-            </div>
-            <div>
-              <ul>
-                <li>item</li>
-                <li>item</li>
-                <li>item</li>
-                <li>item</li>
-              </ul>
+              onClick={mobileNavbarTransparentAndUlClicked}
+              className="mobile-navbar-transparent"
+            ></div>
+            <div className="mobile-navbar-right p-8">
+              <div
+                className="mobile-close-menu mb-4 text-xl"
+                ref={mobileCloseMenu}
+                onClick={mobileCloseMenuF}
+              >
+                X
+              </div>
+              <div onClick={mobileNavbarTransparentAndUlClicked}>
+                <ul>
+                  <li className="py-4 text-xl" onClick={() => navigate("/")}>
+                    {" "}
+                    Home
+                  </li>
+                  <li
+                    className="py-4 text-xl"
+                    onClick={() => navigate("/about/")}
+                  >
+                    {" "}
+                    About
+                  </li>
+                  <li
+                    className="py-4 text-xl"
+                    onClick={() => navigate("/activities/")}
+                  >
+                    Activites
+                  </li>
+                  <li
+                    className="py-4 text-xl"
+                    onClick={() => navigate("/contact/")}
+                  >
+                    Contact
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </PageContainer>
+        </div>
       </div>
     </>
   );

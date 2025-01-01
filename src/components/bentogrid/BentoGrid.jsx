@@ -17,7 +17,7 @@ export default function BentoGrid() {
   }, [controls, inView]);
 
   const boxVariants = {
-    hidden: {opacity: 0, y: 200},
+    hidden: {opacity: 0, y: 100},
     visible: {
       opacity: 1,
       y: 0,
@@ -31,9 +31,9 @@ export default function BentoGrid() {
       animate={controls}
       variants={boxVariants}
     >
-      <div className="bg-gray-50 py-24 sm:py-12">
-        <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 ">
-          <div className="flex flex-col lg:flex-row gap-12 items-center justify-between">
+      <div className="bg-gray-50 py-12 sm:py-12">
+        <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-20 ">
+          <div className="flex flex-col lg:flex-row gap-0 sm:gap-12 items-center justify-between">
             <div className="w-full">
               <h2 className="text-base/7 font-semibold text-blue-800">
                 Deploy faster

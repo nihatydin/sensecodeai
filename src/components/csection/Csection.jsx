@@ -16,7 +16,7 @@ export default function Csection() {
   }, [controls, inView]);
 
   const boxVariants = {
-    hidden: {opacity: 0, y: 200},
+    hidden: {opacity: 0, y: 100},
     visible: {
       opacity: 1,
       y: 0,
@@ -31,9 +31,9 @@ export default function Csection() {
       variants={boxVariants}
     >
       <div className="">
-        <div className=" mx-auto max-w-7xl py-12 sm:px-0 sm:py-32 lg:px-0">
-          <div className="relative isolate overflow-hidden bg-white px-6 sm:rounded-3xl sm:px-8 md:pt-24 lg:flex justify-between lg:gap-x-20 lg:px-8 lg:pt-0">
-            <div className=" mx-auto max-w-lg text-center lg:mx-0 lg:flex-auto lg:py-12 lg:text-left">
+        <div className=" mx-auto max-w-7xl py-12 sm:px-0 sm:py-12 lg:px-12">
+          <div className="relative isolate overflow-hidden bg-white px-6 sm:rounded-3xl sm:px-8 md:pt-24 flex flex-col md:flex-row gap-12 justify-between lg:gap-x-20 lg:px-8 lg:pt-0">
+            <div className=" mx-auto max-w-lg lg:mx-0 lg:flex-auto lg:py-12 text-left">
               <h2 className="text-balance text-3xl font-semibold tracking-tight text-blue-950 sm:text-4xl">
                 Boost your productivity. Start using our app today.
               </h2>
@@ -41,7 +41,7 @@ export default function Csection() {
                 Ac euismod vel sit maecenas id pellentesque eu sed consectetur.
                 Malesuada adipiscing sagittis vel nulla.
               </p>
-              <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
+              <div className="mt-10 flex items-center gap-x-6 lg:justify-start">
                 <a
                   href="#"
                   className="rounded-md bg-blue-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"

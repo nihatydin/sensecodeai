@@ -4,32 +4,32 @@ import {useInView} from "react-intersection-observer";
 
 const people = [
   {
-    name: "Leslie Alexander",
+    name: "Serhat Bahadır Kert",
     role: "Co-Founder / CEO",
     imageUrl: "https://sensecode.yildiz.edu.tr/assets/images/User/1.PNG",
   },
   {
-    name: "Leslie Alexander",
+    name: "Janet C. Read",
     role: "Co-Founder / CEO",
     imageUrl: "https://sensecode.yildiz.edu.tr/assets/images/User/2.PNG",
   },
   {
-    name: "Leslie Alexander",
+    name: "Mehmet Fatih Erkoç",
     role: "Co-Founder / CEO",
     imageUrl: "https://sensecode.yildiz.edu.tr/assets/images/User/3.PNG",
   },
   {
-    name: "Leslie Alexander",
+    name: "Tuba Uğraş",
     role: "Co-Founder / CEO",
     imageUrl: "https://sensecode.yildiz.edu.tr/assets/images/User/6.PNG",
   },
   {
-    name: "Leslie Alexander",
+    name: "Mehmet Fatih Erkoçç",
     role: "Co-Founder / CEO",
     imageUrl: "https://sensecode.yildiz.edu.tr/assets/images/User/3.PNG",
   },
   {
-    name: "Leslie Alexander",
+    name: "Tuba Uğraşş",
     role: "Co-Founder / CEO",
     imageUrl: "https://sensecode.yildiz.edu.tr/assets/images/User/6.PNG",
   },
@@ -50,7 +50,7 @@ export default function ProjectTeam() {
   }, [controls, inView]);
 
   const boxVariants = {
-    hidden: {opacity: 0, y: 200},
+    hidden: {opacity: 0, y: 100},
     visible: {
       opacity: 1,
       y: 0,
@@ -64,11 +64,11 @@ export default function ProjectTeam() {
       animate={controls}
       variants={boxVariants}
     >
-      <div className="bg-white py-24 sm:py-12">
-        <div className="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-3">
+      <div className="bg-white pt-6 py-12 sm:pb-28 sm:pt-12">
+        <div className="mx-auto grid max-w-7xl gap-10 sm:gap-20 px-6 lg:px-20 xl:grid-cols-3">
           <div className="max-w-xl">
             <h2 className="text-pretty text-3xl font-semibold tracking-tight text-blue-950 sm:text-4xl">
-              Meet our leadership
+              Meet Our Project Team
             </h2>
             <p className="mt-6 text-lg/8 text-gray-600">
               We’re a dynamic group of individuals who are passionate about what

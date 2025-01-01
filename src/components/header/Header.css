@@ -1,9 +1,9 @@
 .header {
   width: 100%;
-  background: url(..//ai_touch.webp);
+  /* background: url("https://cdn.pixabay.com/photo/2023/09/24/15/52/ai-generated-8273245_1280.jpg"); */
   /* background: url(..//class.webp); */
   /* background: url(../ai.webp); */
-
+  background-color: rgb(6, 0, 75);
   /* background-color: aliceblue; */
   color: rgb(255, 255, 255);
   background-size: cover;

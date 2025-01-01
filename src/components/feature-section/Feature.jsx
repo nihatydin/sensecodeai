@@ -51,7 +51,7 @@ export default function Feature() {
   }, [controls, inView]);
 
   const boxVariants = {
-    hidden: {opacity: 0, y: 200},
+    hidden: {opacity: 0, y: 100},
     visible: {
       opacity: 1,
       y: 0,
@@ -65,9 +65,9 @@ export default function Feature() {
       animate={controls}
       variants={boxVariants}
     >
-      <div className="bg-white py-24 sm:py-24">
-        <div className="mx-auto max-w-8xl px-6 lg:px-8">
-          <div className="max-w-8xl lg:px-32 flex flex-col lg:flex-row gap-12 items-center justify-between">
+      <div className="bg-white py-12 sm:py-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-20">
+          <div className="max-w-8xl flex flex-col lg:flex-row gap-0 md:gap-12 items-center justify-between">
             <div className="w-full">
               <h2 className="text-base/7 font-semibold text-blue-800">
                 Deploy faster

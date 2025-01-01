@@ -18,7 +18,7 @@
 .address-title {
   font-size: large;
   font-weight: 600;
-  text-transform: uppercase;
+  text-transform: capitalize !important;
   margin-bottom: 30px;
 }
 .address-content {
