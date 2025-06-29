@@ -1,11 +1,14 @@
 import "./Activities.css";
-import Section from "../../components/section/Section";
 import TwitterPost from "../../components/twitterpost/TwitterPost";
+import ActivityFlow from "../../components/ActivityFlow";
+import WhoWeAre from "../../components/WhoWeAre";
+
 function Activities() {
   return (
     <div>
+      <ActivityFlow />
       <TwitterPost />
-      <Section />
+      <WhoWeAre />
     </div>
   );
 }

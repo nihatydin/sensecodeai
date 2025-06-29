@@ -1,6 +1,7 @@
 import React from "react";
 import {motion, useAnimation} from "framer-motion";
 import {useInView} from "react-intersection-observer";
+import methodology from "../assets/methodology.png";
 
 import {
   ArrowPathIcon,
@@ -11,32 +12,38 @@ import {
 
 const features = [
   {
-    name: "Push to deploy",
+    name: "Analysis",
     description:
-      "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
+      "Interviews with teachers and students to assess needs and expectations.",
     icon: CloudArrowUpIcon,
   },
   {
-    name: "SSL certificates",
+    name: "Design",
     description:
-      "Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.",
+      "Development of accessible AI content, tools, and evaluation instruments.",
     icon: LockClosedIcon,
   },
   {
-    name: "Simple queues",
+    name: "Development",
     description:
-      "Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.",
+      "Refinement and prototyping of teaching materials and the physical coding tool.",
     icon: ArrowPathIcon,
   },
   {
-    name: "Advanced security",
+    name: "Implementation",
     description:
-      "Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.",
+      "A 15-hour AI training program delivered to students from earthquake-affected regions of Türkiye.",
+    icon: FingerPrintIcon,
+  },
+  {
+    name: "Evaluaiton",
+    description:
+      "Structured feedback from children, educators, and subject-matter experts to assess usability and impact.",
     icon: FingerPrintIcon,
   },
 ];
 
-export default function Feature() {
+export default function Methodology() {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     threshold: 0, // Görünürlük yüzdesi
@@ -69,29 +76,29 @@ export default function Feature() {
         <div className="mx-auto max-w-7xl px-6 lg:px-20">
           <div className="max-w-8xl flex flex-col lg:flex-row gap-0 md:gap-12 items-center justify-between">
             <div className="w-full">
-              <h2 className="text-base/7 font-semibold text-blue-800">
-                Deploy faster
-              </h2>
-              <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-blue-950 sm:text-5xl lg:text-balance">
-                Everything you need to deploy your app
+              <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-blue-950 lg:text-balance">
+                Our Methodology
               </p>
               <p className="mt-6 text-lg/8 text-gray-600">
-                Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
-                Suspendisse eget egestas a elementum pulvinar et feugiat blandit
-                at. In mi viverra elit nunc.
+                Our approach follows a design-based research (DBR) model that is
+                iterative, inclusive, and grounded in real-world classroom
+                practices. <br /> <br /> <b>Project Phases Include:</b>
               </p>
             </div>
             <div className="w-full">
-              <p className="mt-6 text-lg/8 text-gray-600">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-                optio doloribus enim omnis, libero tempora ipsum repellat harum
-                vitae officiis doloremque perspiciatis illo nobis cupiditate
-                quisquam labore id sint odio.
-              </p>
+              <div className=" flex items-center justify-center max-w-lg text-center lg:mx-0 lg:flex-auto lg:py-12 lg:text-left">
+                <img
+                  id="img-width"
+                  className="rounded"
+                  style={{width: "65%", backgroundSize: "cover"}}
+                  src={methodology}
+                  alt=""
+                />
+              </div>
             </div>
           </div>
-          <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-6xl">
-            <dl className="grid max-w-xl grid-cols-1 gap-x-16 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+          <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-12 lg:max-w-6xl">
+            <dl className="grid max-w-xl grid-cols-1 gap-x-16 gap-y-10 lg:max-w-none lg:grid-cols-3 lg:gap-y-16">
               {features.map((feature) => (
                 <div key={feature.name} className="relative pl-16">
                   <dt className="text-base/7 font-semibold text-gray-900">

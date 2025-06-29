@@ -17,7 +17,7 @@ function TwitterPost() {
   return (
     <div>
       <PageContainer>
-        <div className="twitter-posts">
+        <div className="twitter-posts py-8">
           <blockquote className="twitter-tweet">
             <p lang="en" dir="ltr">
               The Physical design of SenseCode. Finally, we did it🌟🌟🌟 Great

@@ -2,11 +2,12 @@ import {useNavigate} from "react-router-dom";
 import {useRef} from "react";
 import "./Navbar.css";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
+import XIcon from "@mui/icons-material/X";
 
 function Navbar() {
-  const nav = useRef();
-
   const navigate = useNavigate();
+  const nav = useRef();
   const mobileOpenMenu = useRef();
   const mobileCloseMenu = useRef();
   const mobileNavbar = useRef();
@@ -62,7 +63,11 @@ function Navbar() {
             <div className="navbar-right hidden md:block">
               <ul>
                 <li onClick={() => navigate("/")}> Home</li>
-                <li onClick={() => navigate("/about/")}> About</li>
+                <li onClick={() => navigate("/about/")}> SenseCode-AI</li>
+                <a href="https://sensecode.yildiz.edu.tr/">
+                  {" "}
+                  <li> SenseCode</li>
+                </a>
                 <li onClick={() => navigate("/activities/")}>Activites</li>
                 <li onClick={() => navigate("/contact/")}>Contact</li>
               </ul>
@@ -72,7 +77,7 @@ function Navbar() {
               ref={mobileOpenMenu}
               onClick={mobileOpenMenuF}
             >
-              <MenuIcon />
+              <MenuIcon fontSize="medium" />
             </div>
           </div>
           <div
@@ -85,13 +90,13 @@ function Navbar() {
               onClick={mobileNavbarTransparentAndUlClicked}
               className="mobile-navbar-transparent"
             ></div>
-            <div className="mobile-navbar-right p-8">
+            <div className="mobile-navbar-right p-7">
               <div
                 className="mobile-close-menu mb-4 text-xl"
                 ref={mobileCloseMenu}
                 onClick={mobileCloseMenuF}
               >
-                X
+                <CloseRoundedIcon fontSize="medium" />
               </div>
               <div onClick={mobileNavbarTransparentAndUlClicked}>
                 <ul>
@@ -104,8 +109,12 @@ function Navbar() {
                     onClick={() => navigate("/about/")}
                   >
                     {" "}
-                    About
+                    SenseCode-AI
                   </li>
+                  <a href="https://sensecode.yildiz.edu.tr/">
+                    {" "}
+                    <li className="py-4 text-xl">SenseCode</li>
+                  </a>
                   <li
                     className="py-4 text-xl"
                     onClick={() => navigate("/activities/")}
@@ -117,6 +126,13 @@ function Navbar() {
                     onClick={() => navigate("/contact/")}
                   >
                     Contact
+                  </li>
+                  <li
+                    className="py-4 text-xl"
+                    onClick={() => navigate("/contact/")}
+                  >
+                    Follow On{" "}
+                    <XIcon style={{fontSize: "18px", marginLeft: "5px"}} />
                   </li>
                 </ul>
               </div>

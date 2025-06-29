@@ -1,5 +1,6 @@
-/* .twitter-posts {
-} */
+.twitter-posts {
+  overflow-x: hidden;
+}
 .twitter-tweet {
   margin: 0 auto;
 }

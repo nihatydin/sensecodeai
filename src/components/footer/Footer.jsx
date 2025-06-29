@@ -3,7 +3,7 @@ function Footer() {
   return (
     <div className="footer">
       <div className="footer-container">
-        Copyright 2025 All Right Reserved - SenseCodeAI
+        Copyright 2025 All Right Reserved - SenseCode-AI
       </div>
     </div>
   );

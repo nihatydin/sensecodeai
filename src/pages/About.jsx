@@ -1,10 +1,14 @@
-import Header from "../components/header/Header";
-import BentoGrid from "../components/BentoGrid";
 import VisionMission from "../components/VisionMission";
+import ProjectTeam from "../components/ProjectTeam";
 import WhoWeAre from "../components/WhoWeAre";
+import Impact from "../components/Impact";
+import Methodology from "../components/Methodology";
+import Objectives from "../components/Objectives";
+import SdgValueAhead from "../components/SdgValueAhead";
+import BentoGrid from "../components/BentoGrid";
 import classImg from "../assets/class.webp";
 
-function Home() {
+function About() {
   const textProps = [
     {
       title: "Our Vision",
@@ -46,14 +50,18 @@ function Home() {
   ];
   return (
     <div>
-      <Header />
       <BentoGrid />
       {textProps.map((props, i) => (
         <VisionMission key={i} {...props} />
       ))}
+      <Objectives />
+      <Methodology />
+      <Impact />
+      <SdgValueAhead />
+      <ProjectTeam />
       <WhoWeAre />
     </div>
   );
 }
 
-export default Home;
+export default About;
