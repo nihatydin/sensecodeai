@@ -53,12 +53,16 @@ function Navbar() {
         <div className="max-w-8xl">
           <div className="navbar-container" ref={navbar}>
             <div className="navbar-left">
+              {/* Logo olmadigi icin temsili bir logo */}
               <img
                 className="logo-img"
                 src="https://sensecode.yildiz.edu.tr/assets/images/icons/logo.png"
                 alt=""
                 onClick={() => navigate("/")}
               />
+              <span onClick={() => navigate("/")} style={{cursor: "pointer"}}>
+                LOGO IMG
+              </span>
             </div>
             <div className="navbar-right hidden md:block">
               <ul>

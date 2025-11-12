@@ -17,7 +17,7 @@ export default function VisionMission({title, content, img, rowReverse}) {
   }, [controls, inView]);
 
   const boxVariants = {
-    hidden: {opacity: 0, y: 100},
+    hidden: {opacity: 0, y: 50},
     visible: {
       opacity: 1,
       y: 0,
@@ -32,7 +32,7 @@ export default function VisionMission({title, content, img, rowReverse}) {
       variants={boxVariants}
     >
       <div className="">
-        <div className=" mx-auto max-w-7xl py-12 pb-20 sm:px-0 sm:py-12 lg:px-12">
+        <div className=" mx-auto max-w-7xl pb-24 sm:px-0 sm:my-12 sm:pb-8 lg:px-12">
           <div
             className={`relative isolate overflow-hidden bg-white px-6 sm:rounded-3xl sm:px-8 md:pt-24 flex flex-col ${
               rowReverse ? "md:flex-row-reverse" : "md:flex-row"
