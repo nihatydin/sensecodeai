@@ -63,7 +63,11 @@ function Header() {
           />
         </div>
       </div>
-      <div ref={fixedBg} className="background"></div>
+      <div
+        ref={fixedBg}
+        style={{backgroundImage: `url(${classImg})`}}
+        className="background"
+      ></div>
       <div ref={opacityBg} className="opacitybg"></div>
     </div>
   );

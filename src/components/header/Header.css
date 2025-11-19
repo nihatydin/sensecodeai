@@ -11,7 +11,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../../assets//class.webp");
+  /*Deployda path hatali durdugu icin image gozukmuyor. Bu yuzden jsx icerisinde image url tanimlandi.*/
+  /*background-image: url("../../assets/class.webp");*/
   background-size: cover;
   background-position: center top;
   transition: transform 0.5s ease-in-out;
